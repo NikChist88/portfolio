@@ -1,131 +1,127 @@
 * {
-	padding: 0px;
-	margin: 0px;
-	border: 0px;
-  box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #050404;
-  color: #ffffff;
+	font-family: 'Roboto', sans-serif;
+	background-color: #050404;
+	color: #ffffff;
 }
 
 .container {
-  max-width: 1180px;
-  padding: 0px 15px;
-  margin: 0 auto;
+	max-width: 1210px;
+	padding: 0 15px;
+	margin: 0 auto;
 }
 
 /* header */
 .header {
-  padding: 60px 0px 80px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+	padding: 60px 0 80px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .header__logo {
-  font-size: 22px;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-weight: 700;
-  color: #ffffff;
-  border: 3px solid #8d5dd1;
-  padding: 12px 22.5px;
-  border-radius: 10px;
+	font-size: 22px;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: 700;
+	color: #ffffff;
+	border: 3px solid #8d5dd1;
+	padding: 12px 22.5px;
+	border-radius: 10px;
 }
 
 .header__nav {
-  display: flex;
-  gap: 38px;
-  margin: 0px 15px;
+	display: flex;
+	gap: 38px;
+	margin: 0 15px;
 }
 
 .header__link {
-  font-size: 22px;
-  color: #ffffff;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: color 0.5s ease 0s;
-  font-weight: 500;
+	font-size: 22px;
+	color: #ffffff;
+	text-transform: uppercase;
+	text-decoration: none;
+	transition: color 0.5s ease 0s;
+	font-weight: 500;
 }
 
 .header__link_active {
-  color: #FFB822;
+	color: #ffb822;
 }
 
 .header__link:hover {
-  color: #FFB822;
+	color: #ffb822;
 }
 
 .header__search {
-  max-width: 280px;
-  height: 55px;
-  border: 3px solid #8d5dd1;
-  background-color: #050404;
-  border-radius: 10px;
-  color: #cccccc;
-  font-size: 22px;
-  padding: 15px;
-  position: relative;
-  outline: none;
+	max-width: 280px;
+	height: 55px;
+	border: 3px solid #8d5dd1;
+	background-color: #050404;
+	border-radius: 10px;
+	color: #cccccc;
+	font-size: 22px;
+	padding: 15px;
+	position: relative;
+	outline: none;
 }
 
 .header__search::placeholder {
-  font-size: 22px;
-  text-transform: uppercase;
-  color: #cccccc;
-  font-weight: 700;
+	font-size: 22px;
+	text-transform: uppercase;
+	color: #cccccc;
+	font-weight: 700;
 }
 
 .header__search:focus {
-  border-color: #b991f1;
+	border-color: #b991f1;
 }
 /* end header */
 
 /* section hero */
 .hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+	background: url('image/kate-leo.jpeg') no-repeat;
+  height: 780px;
   position: relative;
 }
 
-.hero__image {
-  width: 100%;
-  height: 100%;
-}
-
 .hero::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.411);
-}
-
-.hero__body {
-  position: absolute;
-  left: 0;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.4);
 }
 
 .hero__title {
-  font-size: 100px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #FFB822;
+	font-size: 100px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #ffb822;
+  z-index: 2;
 }
 
 .hero__desc {
-  font-size: 40px;
-  font-weight: 700;
-  text-transform: uppercase;
+	font-size: 40px;
+	font-weight: 700;
+	text-transform: uppercase;
+  z-index: 2;
 }
 /* end section hero */
