@@ -1,6 +1,12 @@
 import styled from 'styled-components'
 
 export const StyledNavigation = styled.nav`
-  display: flex;
-  column-gap: 42px;
+  ul {
+    display: flex;
+    column-gap: 42px;
+    list-style: none;
+    li + li {
+      margin-left: 10px;
+    }
+  }
 `

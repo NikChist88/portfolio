@@ -6,4 +6,8 @@ export const StyledLogo = styled.a`
   font-weight: 600;
   color: #7562e0;
   text-decoration: none;
+  transition: color ease-in 0.3s;
+  &:hover {
+    color: #5648a5;
+  }
 `

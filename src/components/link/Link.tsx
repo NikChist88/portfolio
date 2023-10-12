@@ -1,12 +1,9 @@
-import { StyledLink } from "./Link.styled"
+import { StyledLink } from './Link.styled'
 
-export const Link = () => {
-  return (
-    <>
-      <StyledLink href="#">Home</StyledLink>
-      <StyledLink href="#">About me</StyledLink>
-      <StyledLink href="#">Projects</StyledLink>
-      <StyledLink href="#">Contact</StyledLink>
-    </>
-  )
+type LinkPropsType = {
+  text: string
+}
+
+export const Link = (props: LinkPropsType) => {
+  return <StyledLink href="#">{props.text}</StyledLink>
 }

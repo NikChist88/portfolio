@@ -6,9 +6,6 @@ export const StyledLink = styled.a`
   color: #fff;
   text-decoration: none;
   transition: color ease-in 0.3s;
-  & + a {
-    margin-left: 10px;
-  }
   &:hover {
     color: #7562e0;
   }
