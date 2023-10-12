@@ -1,5 +1,4 @@
-import styled from 'styled-components'
-import { Header } from './layouts/header/Header'
+import { Header } from './layout/header/Header'
 
 export const App = () => {
   return (
