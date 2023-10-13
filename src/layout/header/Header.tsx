@@ -7,8 +7,10 @@ export const Header = () => {
   return (
     <StyledHeader>
       <StyledContainer>
-        <Logo />
-        <Menu />
+        <div>
+          <Logo />
+          <Menu />
+        </div>
       </StyledContainer>
     </StyledHeader>
   )

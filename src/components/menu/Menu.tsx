@@ -1,23 +1,22 @@
-import { StyledNavigation } from './Menu.styled'
-import { Link } from '../link/Link'
+import { StyledMenu } from './Menu.styled'
 
 export const Menu = () => {
   return (
-    <StyledNavigation>
+    <StyledMenu>
       <ul>
         <li>
-          <Link text="Home" />
+          <a href="#">Home</a>
         </li>
         <li>
-          <Link text="About me" />
+          <a href="#">About me</a>
         </li>
         <li>
-          <Link text="Projects" />
+          <a href="#">Projects</a>
         </li>
         <li>
-          <Link text="Contact" />
+          <a href="#">Contact</a>
         </li>
       </ul>
-    </StyledNavigation>
+    </StyledMenu>
   )
 }
