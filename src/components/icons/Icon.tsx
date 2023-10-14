@@ -1,9 +1,11 @@
 import iconsSprite from '../../assets/icons/sprite.svg'
+import styled from 'styled-components'
 
 type IconPropsType = {
   iconId: string
   width?: string
   height?: string
+  viewBox?: string
 }
 
 export const Icon = (props: IconPropsType) => {
@@ -11,7 +13,7 @@ export const Icon = (props: IconPropsType) => {
     <svg
       width={props.width}
       height={props.height}
-      viewBox="0 0 62 62"
+      viewBox={props.viewBox}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >

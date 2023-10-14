@@ -4,13 +4,19 @@ import { Flex } from '../../components/Flex'
 import { Logo } from '../../components/Logo.styled'
 import { Menu } from '../../components/menu/Menu'
 
-export const Header = () => {
+const menuItems = ['Home', 'About me', 'Projects', 'Contact']
+
+type HeaderPropsType = {
+  text: string
+}
+
+export const Header = (props: HeaderPropsType) => {
   return (
     <StyledHeader>
       <Container>
         <Flex align="center" justify="space-between" height="100%">
-          <Logo href="#">Jayjay Dinero</Logo>
-          <Menu />
+          <Logo href='#'>{props.text}</Logo>
+          <Menu items={menuItems} />
         </Flex>
       </Container>
     </StyledHeader>

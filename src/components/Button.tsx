@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 type ButtonPropsType = {
   primary?: boolean
+  icon?: string
 }
 
 export const Button = styled.a<ButtonPropsType>`
@@ -9,7 +10,6 @@ export const Button = styled.a<ButtonPropsType>`
   align-items: center;
   justify-content: center;
   flex: 0 0 160px;
-  width: 100%;
   min-height: 48px;
   font-size: 16px;
   font-weight: 600;

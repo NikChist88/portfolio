@@ -2,22 +2,17 @@ import styled from 'styled-components'
 import { MenuList } from './MenuList.styled'
 import { MenuLink } from './MenuLink.styled'
 
-export const Menu = () => {
+export const Menu = (props: { items: Array<string> }) => {
   return (
     <StyledMenu>
       <MenuList>
-        <li>
-          <MenuLink href="#">Home</MenuLink>
-        </li>
-        <li>
-          <MenuLink href="#">About me</MenuLink>
-        </li>
-        <li>
-          <MenuLink href="#">Projects</MenuLink>
-        </li>
-        <li>
-          <MenuLink href="#">Contacts</MenuLink>
-        </li>
+        {props.items.map((item, index) => {
+          return (
+            <li key={index}>
+              <MenuLink href="#">{item}</MenuLink>
+            </li>
+          )
+        })}
       </MenuList>
     </StyledMenu>
   )
