@@ -3,6 +3,7 @@ import { Container } from '../../../components/Container'
 import { Flex } from '../../../components/Flex'
 import { Wrapper } from '../../../components/Wrapper'
 import { Button } from '../../../components/Button'
+import { Image } from '../../../components/Image'
 import photo from '../../../assets/images/photo.png'
 import { Icon } from '../../../components/icons/Icon'
 
@@ -42,7 +43,13 @@ export const Hero = (props: HeroPropsType) => {
               </Button>
             </Flex>
           </Wrapper>
-          <Image src={photo} alt="My photo" />
+          <Image
+            src={photo}
+            alt="My photo"
+            width="100%"
+            height="444px"
+            maxWidth="444px"
+          />
         </Flex>
       </Container>
       <Block></Block>
@@ -71,13 +78,6 @@ const DescriptionHero = styled.h1`
   margin-top: 12px;
 `
 
-const Image = styled.img`
-  width: 100%;
-  max-width: 444px;
-  height: 444px;
-  object-fit: cover;
-  align-self: flex-end;
-`
 const Block = styled.div`
   width: 100%;
   height: 128px;
