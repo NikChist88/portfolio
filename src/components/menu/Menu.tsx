@@ -1,22 +1,30 @@
-import { StyledMenu } from './Menu.styled'
+import styled from 'styled-components'
+import { MenuList } from './MenuList.styled'
+import { MenuLink } from './MenuLink.styled'
 
 export const Menu = () => {
   return (
     <StyledMenu>
-      <ul>
+      <MenuList>
         <li>
-          <a href="#">Home</a>
+          <MenuLink href="#">Home</MenuLink>
         </li>
         <li>
-          <a href="#">About me</a>
+          <MenuLink href="#">About me</MenuLink>
         </li>
         <li>
-          <a href="#">Projects</a>
+          <MenuLink href="#">Projects</MenuLink>
         </li>
         <li>
-          <a href="#">Contact</a>
+          <MenuLink href="#">Contacts</MenuLink>
         </li>
-      </ul>
+      </MenuList>
     </StyledMenu>
   )
 }
+
+const StyledMenu = styled.nav`
+  li + li {
+    margin-left: 10px;
+  }
+`

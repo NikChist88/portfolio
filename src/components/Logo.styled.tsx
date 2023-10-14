@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const StyledLogo = styled.a`
+export const Logo = styled.a`
   display: inline-block;
   font-size: 28px;
   font-weight: 600;
