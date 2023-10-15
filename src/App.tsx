@@ -1,5 +1,6 @@
 import { Header } from './layout/header/Header'
 import { Hero } from './layout/sections/hero/Hero'
+import { About } from './layout/sections/about/About'
 
 export const App = () => {
   return (
@@ -10,6 +11,7 @@ export const App = () => {
         name="Jayjay D. Dinero"
         desc="A Web Developer. I create seamless web experiences for end-users."
       />
+      <About />
     </>
   )
 }

@@ -14,9 +14,17 @@ export const GlobalStyles = createGlobalStyle`
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
 html,
 body {
-  height: 100%;
+  min-height: 100%;
 }
 
 body {

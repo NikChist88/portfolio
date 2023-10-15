@@ -1,11 +1,12 @@
 import styled from 'styled-components'
+import { StyledHero } from './Hero.styled'
 import { Container } from '../../../components/Container'
 import { Flex } from '../../../components/Flex'
 import { Wrapper } from '../../../components/Wrapper'
 import { Button } from '../../../components/Button'
 import { Image } from '../../../components/Image'
-import photo from '../../../assets/images/photo.png'
 import { Icon } from '../../../components/icons/Icon'
+import photo from '../../../assets/images/photo.png'
 
 type HeroPropsType = {
   text: string
@@ -29,16 +30,16 @@ export const Hero = (props: HeroPropsType) => {
                   iconId="user"
                   width="20px"
                   height="20px"
-                  viewBox="0 0 20px 20px"
+                  viewBox="0 0 20 20"
                 />
               </Button>
-              <Button href="#">
+              <Button href="#"> 
                 Projects
                 <Icon
                   iconId="eye"
                   width="20px"
                   height="20px"
-                  viewBox="0 0 20px 20px"
+                  viewBox="0 0 20 20"
                 />
               </Button>
             </Flex>
@@ -47,19 +48,14 @@ export const Hero = (props: HeroPropsType) => {
             src={photo}
             alt="My photo"
             width="100%"
-            height="444px"
             maxWidth="444px"
+            height='444px'
           />
         </Flex>
       </Container>
-      <Block></Block>
     </StyledHero>
   )
 }
-
-const StyledHero = styled.section`
-  padding-top: 117px;
-`
 
 const TextHero = styled.span`
   font-size: 32px;
@@ -80,6 +76,6 @@ const DescriptionHero = styled.h1`
 
 const Block = styled.div`
   width: 100%;
-  height: 128px;
+  min-height: 128px;
   background-color: #181824;
 `
