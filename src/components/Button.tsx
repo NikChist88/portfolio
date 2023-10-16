@@ -22,4 +22,7 @@ export const Button = styled.a<ButtonPropsType>`
   &:hover {
     background-color: ${({ primary }) => (primary ? '#5345a1' : '#7562e0')};
   }
+  svg {
+    margin-left: 8px;
+  }
 `

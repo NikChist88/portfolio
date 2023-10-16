@@ -23,5 +23,5 @@ export const Icon = (props: IconPropsType) => {
 }
 
 const StyledIcon = styled.svg`
-  margin-left: 6px;
+  /* margin-left: 6px; */
 `

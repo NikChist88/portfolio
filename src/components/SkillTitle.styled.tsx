@@ -5,4 +5,5 @@ export const SkillTitle = styled.h3`
   font-weight: 600;
   color: #fff;
   text-transform: uppercase;
+  max-width: 200px;
 `

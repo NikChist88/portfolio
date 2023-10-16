@@ -1,15 +1,52 @@
 import styled from 'styled-components'
 import { SectionTitle } from '../../../components/SectionTitle.styled'
 import { Container } from '../../../components/Container'
-import { Icon } from '../../../components/icons/Icon'
-import { SkillTitle } from '../../../components/SkillTitle.styled'
-import { StyledAboutSkills } from './AboutSkills.styled'
+import { AboutSkills } from './AboutSkills'
 
-export const About = () => {
+const skillsItems = [
+  {
+    id: 1,
+    iconId: 'code',
+    iconWidth: '52px',
+    iconHeight: '52px',
+    viewBox: '0 0 52 52',
+    title: 'ui & ux designing',
+  },
+  {
+    id: 2,
+    iconId: 'code',
+    iconWidth: '52px',
+    iconHeight: '52px',
+    viewBox: '0 0 52 52',
+    title: 'web development',
+  },
+  {
+    id: 3,
+    iconId: 'android',
+    iconWidth: '62px',
+    iconHeight: '62px',
+    viewBox: '0 0 62 62',
+    title: 'mobile development',
+  },
+  {
+    id: 4,
+    iconId: 'python',
+    iconWidth: '55px',
+    iconHeight: '55px',
+    viewBox: '0 0 55 55',
+    title: 'web scraping with python',
+  },
+]
+
+type AboutPropsType = {
+  sectionTitle: string
+}
+
+export const About = (props: AboutPropsType) => {
   return (
     <StyledAbout>
       <Container>
-        <SectionTitle>About me:</SectionTitle>
+        <SectionTitle>{props.sectionTitle}</SectionTitle>
         <StyledAboutText>
           Hi, my name is Jayjay Dinero Dinero, i am a Fullstack web developer,
           UI designer, and Mobile developer. I jhave honed my skills in Web
@@ -20,59 +57,14 @@ export const About = () => {
           <span>5+</span>Years of experience. Specialised in building apps,
           while ensuring a seamless web experience for end users.
         </StyledAboutDescription>
-        <StyledAboutSkills>
-          <li>
-            <a href="#">
-              <Icon
-                iconId="code"
-                width="52px"
-                height="52px"
-                viewBox="0 0 52 52"
-              />
-              <SkillTitle>Ui & Ux Designer</SkillTitle>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <Icon
-                iconId="code"
-                width="52px"
-                height="52px"
-                viewBox="0 0 52 52"
-              />
-              <SkillTitle>Ui & Ux Designer</SkillTitle>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <Icon
-                iconId="code"
-                width="52px"
-                height="52px"
-                viewBox="0 0 52 52"
-              />
-              <SkillTitle>Ui & Ux Designer</SkillTitle>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <Icon
-                iconId="code"
-                width="52px"
-                height="52px"
-                viewBox="0 0 52 52"
-              />
-              <SkillTitle>Ui & Ux Designer</SkillTitle>
-            </a>
-          </li>
-        </StyledAboutSkills>
+        <AboutSkills items={skillsItems} />
       </Container>
     </StyledAbout>
   )
 }
 
 const StyledAbout = styled.section`
-  padding: 183px 0 80px;
+  padding: 180px 0 80px;
 `
 
 const StyledAboutText = styled.p`

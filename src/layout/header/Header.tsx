@@ -7,7 +7,7 @@ import { Menu } from '../../components/menu/Menu'
 const menuItems = ['Home', 'About me', 'Projects', 'Contact']
 
 type HeaderPropsType = {
-  text: string
+  logoText: string
 }
 
 export const Header = (props: HeaderPropsType) => {
@@ -15,7 +15,7 @@ export const Header = (props: HeaderPropsType) => {
     <StyledHeader>
       <Container>
         <Flex align="center" justify="space-between" height="100%">
-          <Logo href='#'>{props.text}</Logo>
+          <Logo href='#'>{props.logoText}</Logo>
           <Menu items={menuItems} />
         </Flex>
       </Container>
@@ -25,6 +25,7 @@ export const Header = (props: HeaderPropsType) => {
 
 const StyledHeader = styled.header`
   width: 100%;
-  height: 80px;
+  min-height: 80px;
+  height: 1px;
   background-color: #181824;
 `
