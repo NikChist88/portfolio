@@ -36,5 +36,4 @@ body {
   color: #fff;
   background-color: #1a1a29;
 }
-
 `

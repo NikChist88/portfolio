@@ -6,10 +6,10 @@ import { AboutSkills } from './AboutSkills'
 const skillsItems = [
   {
     id: 1,
-    iconId: 'code',
-    iconWidth: '52px',
-    iconHeight: '52px',
-    viewBox: '0 0 52 52',
+    iconId: 'ruler',
+    iconWidth: '42px',
+    iconHeight: '42px',
+    viewBox: '0 0 42 42',
     title: 'ui & ux designing',
   },
   {

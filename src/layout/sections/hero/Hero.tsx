@@ -73,9 +73,3 @@ const DescriptionHero = styled.h1`
   font-weight: 500;
   margin-top: 12px;
 `
-
-const Block = styled.div`
-  width: 100%;
-  min-height: 128px;
-  background-color: #181824;
-`
