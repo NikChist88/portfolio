@@ -38,15 +38,11 @@ const skillsItems = [
   },
 ]
 
-type AboutPropsType = {
-  sectionTitle: string
-}
-
-export const About = (props: AboutPropsType) => {
+export const About = () => {
   return (
     <StyledAbout>
       <Container>
-        <SectionTitle>{props.sectionTitle}</SectionTitle>
+        <SectionTitle>About me:</SectionTitle>
         <StyledAboutText>
           Hi, my name is Jayjay Dinero Dinero, i am a Fullstack web developer,
           UI designer, and Mobile developer. I jhave honed my skills in Web

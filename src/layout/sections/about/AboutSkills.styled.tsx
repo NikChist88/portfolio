@@ -2,11 +2,12 @@ import styled from 'styled-components'
 
 export const StyledAboutSkills = styled.ul`
   display: flex;
+  flex-wrap: wrap;
   margin-top: 20px;
-  gap: 0 17px;
+  gap: 17px 17px;
   
   li {
-    flex: 1 0 25%;
+    flex: 0 1 254px;
     min-height: 254px;
     padding: 24px;
     background-color: #bdbdbd;
