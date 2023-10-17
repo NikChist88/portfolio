@@ -6,10 +6,11 @@ type ImagePropsType = {
   maxWidth?: string
 }
 
-export const Image = styled.img<ImagePropsType>`
+export const HeroImage = styled.img<ImagePropsType>`
   width: ${({ width }) => width};
   max-width: ${({ maxWidth }) => maxWidth};
   height: ${({ height }) => height};
   object-fit: cover;
   align-self: flex-end;
+  z-index: 2;
 `

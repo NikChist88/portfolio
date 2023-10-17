@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Container } from '../../components/Container'
 import { Flex } from '../../components/Flex'
 import { Logo } from '../../components/Logo.styled'
-import { Menu } from '../../components/menu/Menu'
+import { Navigation } from '../../components/navigation/Navigation'
 
 const menuItems = ['Home', 'About me', 'Projects', 'Contact']
 
@@ -15,8 +15,8 @@ export const Header = (props: HeaderPropsType) => {
     <StyledHeader>
       <Container>
         <Flex align="center" justify="space-between" height="100%">
-          <Logo href='#'>{props.logoText}</Logo>
-          <Menu items={menuItems} />
+          <Logo href="#">{props.logoText}</Logo>
+          <Navigation items={menuItems} />
         </Flex>
       </Container>
     </StyledHeader>
@@ -24,6 +24,10 @@ export const Header = (props: HeaderPropsType) => {
 }
 
 const StyledHeader = styled.header`
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
   width: 100%;
   min-height: 80px;
   height: 1px;

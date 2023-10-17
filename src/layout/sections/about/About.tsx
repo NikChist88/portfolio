@@ -7,9 +7,9 @@ const skillsItems = [
   {
     id: 1,
     iconId: 'ruler',
-    iconWidth: '42px',
-    iconHeight: '42px',
-    viewBox: '0 0 42 42',
+    iconWidth: '55px',
+    iconHeight: '55px',
+    viewBox: '0 0 55 55',
     title: 'ui & ux designing',
   },
   {
@@ -77,6 +77,7 @@ const StyledAboutDescription = styled.p`
   align-items: center;
   font-size: 24px;
   margin-top: 25px;
+  
   span {
     font-size: 96px;
     font-weight: 600;
