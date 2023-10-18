@@ -11,6 +11,5 @@ export const HeroImage = styled.img<ImagePropsType>`
   max-width: ${({ maxWidth }) => maxWidth};
   height: ${({ height }) => height};
   object-fit: cover;
-  align-self: flex-end;
-  z-index: 2;
+  z-index: 1;
 `

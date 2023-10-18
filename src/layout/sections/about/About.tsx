@@ -26,7 +26,7 @@ export const About = () => {
 }
 
 const StyledAbout = styled.section`
-  padding: 180px 0 80px;
+  padding-bottom: 40px;
 `
 
 const StyledAboutText = styled.p`

@@ -12,7 +12,7 @@ export const Hero = () => {
   return (
     <StyledHero>
       <Container>
-        <Flex justify="space-between" align="center" height="100%">
+        <Flex justify="space-between" align="center" height='100%'>
           <Wrapp maxWidth='435px'>
             <HeroText>Hello, i'm</HeroText>
             <HeroName>Jayjay D. Dinero</HeroName>

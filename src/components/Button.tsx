@@ -17,6 +17,7 @@ export const Button = styled.a<ButtonPropsType>`
   color: #fff;
   text-decoration: none;
   transition: background-color ease-in 0.3s;
+  cursor: pointer;
   border: ${({ primary }) => (primary ? 'none' : '2px solid #7562e0')};
   background-color: ${({ primary }) => (primary ? '#7562e0' : '#1a1a29')};
   &:hover {
