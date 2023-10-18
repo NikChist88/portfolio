@@ -1,13 +1,13 @@
 import styled from 'styled-components'
 
 export const StyledAboutSkills = styled.ul`
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+  gap: 16px;
   margin-top: 20px;
-  gap: 17px 17px;
-  
+
   li {
-    flex: 0 1 254px;
+    flex: 0 1 255px;
     min-height: 254px;
     padding: 24px;
     background-color: #bdbdbd;
@@ -21,7 +21,7 @@ export const StyledAboutSkills = styled.ul`
   a {
     position: relative;
     top: 73px;
-    
+
     svg {
       margin-bottom: 5px;
     }

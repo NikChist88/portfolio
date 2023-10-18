@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "iconId": "ruler",
+    "iconWidth": "55px",
+    "iconHeight": "55px",
+    "viewBox": "0 0 55 55",
+    "title": "ui & ux designing"
+  },
+  {
+    "id": 2,
+    "iconId": "code",
+    "iconWidth": "52px",
+    "iconHeight": "52px",
+    "viewBox": "0 0 52 52",
+    "title": "web development"
+  },
+  {
+    "id": 3,
+    "iconId": "android",
+    "iconWidth": "62px",
+    "iconHeight": "62px",
+    "viewBox": "0 0 62 62",
+    "title": "mobile development"
+  },
+  {
+    "id": 4,
+    "iconId": "python",
+    "iconWidth": "55px",
+    "iconHeight": "55px",
+    "viewBox": "0 0 55 55",
+    "title": "web scraping with python"
+  }
+]

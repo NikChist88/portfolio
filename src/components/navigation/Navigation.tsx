@@ -5,10 +5,10 @@ import { MenuLinkMask } from './MenuLinkMask.styled'
 export const Navigation = (props: { items: Array<string> }) => {
   return (
     <nav>
-      <Menu>
+      <Menu role="menu" aria-label={'Menu'}>
         {props.items.map((item, index) => {
           return (
-            <MenuItem key={index}>
+            <MenuItem role="menuitem" key={index}>
               <a href="#">
                 {item}
                 <MenuLinkMask>

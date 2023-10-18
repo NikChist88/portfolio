@@ -6,16 +6,12 @@ import { Navigation } from '../../components/navigation/Navigation'
 
 const menuItems = ['Home', 'About me', 'Projects', 'Contact']
 
-type HeaderPropsType = {
-  logoText: string
-}
-
-export const Header = (props: HeaderPropsType) => {
+export const Header = () => {
   return (
     <StyledHeader>
       <Container>
         <Flex align="center" justify="space-between" height="100%">
-          <Logo href="#">{props.logoText}</Logo>
+          <Logo href="#">Jayjay Dinero</Logo>
           <Navigation items={menuItems} />
         </Flex>
       </Container>

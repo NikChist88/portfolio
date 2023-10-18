@@ -37,9 +37,7 @@ export const ServicesItems = (props: {
 }
 
 const StyledServicesItems = styled.ul`
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 20px 0;
-  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
 `
