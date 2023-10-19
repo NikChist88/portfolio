@@ -29,7 +29,7 @@ export const Hero = () => {
                   viewBox="0 0 20 20"
                 />
               </Button>
-              <Button href="#">
+              <Button href="#" bg='transparent'>
                 Projects
                 <Icon
                   iconId="eye"

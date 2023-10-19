@@ -19,14 +19,16 @@ export const ProjectsItems = (props: {
       {props.items.map((item) => {
         return (
           <li key={item.id}>
-            <div>
-              <img src={item.src} alt={item.alt} />
-              <SkillTitle>{item.title}</SkillTitle>
-              <p>{item.description}</p>
-            </div>
-            <Flex justifySelf='flex-end'>
-              <Button>View Live</Button>
-              <Button>Github Repo</Button>
+            <img src={item.src} alt={item.alt} />
+            <SkillTitle>{item.title}</SkillTitle>
+            <p>{item.description}</p>
+            <Flex>
+              <Button href="#" primary height="43px" width="145px">
+                View Live
+              </Button>
+              <Button href="#" height="43px" width="145px" bg="transparent">
+                Github Repo
+              </Button>
             </Flex>
           </li>
         )
@@ -48,19 +50,27 @@ const StyledProjectsItems = styled.ul`
     background-color: #31313f;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
-    & div:first-of-type {
+    img {
+      width: 100%;
+      height: 170px;
+      margin-bottom: 16px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    h3 {
+      margin-bottom: 5px;
+      color: #7562e0;
+    }
+
+    p {
+      flex-grow: 1;
       margin-bottom: 24px;
     }
-  }
 
-  img {
-    width: 310px;
-    height: 170px;
-    margin-bottom: 16px;
-    border-radius: 8px;
-  }
-
-  h3 {
-    margin-bottom: 5px;
+    div {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 `

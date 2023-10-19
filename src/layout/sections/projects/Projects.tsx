@@ -19,4 +19,12 @@ export const Projects = () => {
   )
 }
 
-const StyledProjects = styled.section``
+const StyledProjects = styled.section`
+  h2 {
+    margin-bottom: 16px;
+  }
+
+  p {
+    margin-bottom: 32px;
+  }
+`

@@ -3,26 +3,32 @@ import styled from 'styled-components'
 type ButtonPropsType = {
   primary?: boolean
   icon?: string
+  height?: string
+  width?: string
+  bg?: string
+  border?: string
 }
 
 export const Button = styled.a<ButtonPropsType>`
   display: flex;
   align-items: center;
   justify-content: center;
-  flex: 0 0 160px;
-  min-height: 48px;
   font-size: 16px;
   font-weight: 600;
   border-radius: 8px;
   color: #fff;
-  text-decoration: none;
-  transition: background-color ease-in 0.3s;
+  transition: background-color ease-in 0.3s, border-color ease-in 0.3s;
   cursor: pointer;
-  border: ${({ primary }) => (primary ? 'none' : '2px solid #7562e0')};
-  background-color: ${({ primary }) => (primary ? '#7562e0' : '#1a1a29')};
+  border: ${({ border }) => border || '2px solid #7562e0'};
+  background-color: ${({ bg }) => bg || '#7562e0'};
+  height: ${({ height }) => height || '48px'};
+  width: ${({ width }) => width || '160px'};
+
   &:hover {
-    background-color: ${({ primary }) => (primary ? '#5345a1' : '#7562e0')};
+    background-color: ${({ primary }) => (primary ? '#50439b' : '#7562e0')};
+    border-color: ${({ primary }) => (primary ? '#50439b' : '#7562e0')};
   }
+
   svg {
     margin-left: 8px;
   }
