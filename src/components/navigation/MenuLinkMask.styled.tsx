@@ -8,6 +8,7 @@ export const MenuLinkMask = styled.span`
   height: 50%;
   overflow-y: hidden;
   color: #fff;
+  
   & + & {
     top: 50%;
     span {

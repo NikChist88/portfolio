@@ -2,9 +2,8 @@ import styled from 'styled-components'
 import { StyledHero } from './Hero.styled'
 import { Container } from '../../../components/Container'
 import { Flex } from '../../../components/Flex'
-import { Wrapp } from '../../../components/Wrapp'
+import { Block } from '../../../components/Block'
 import { Button } from '../../../components/Button'
-import { HeroImage } from './HeroImage.styled'
 import { Icon } from '../../../components/icons/Icon'
 import photo from '../../../assets/images/photo.png'
 
@@ -12,8 +11,8 @@ export const Hero = () => {
   return (
     <StyledHero>
       <Container>
-        <Flex justify="space-between" align="center" height='100%'>
-          <Wrapp maxWidth='435px'>
+        <Flex justify="space-between" align="center" height="100%">
+          <Block maxWidth="435px">
             <HeroText>Hello, i'm</HeroText>
             <HeroName>Jayjay D. Dinero</HeroName>
             <HeroDescription>
@@ -29,7 +28,7 @@ export const Hero = () => {
                   viewBox="0 0 20 20"
                 />
               </Button>
-              <Button href="#" bg='transparent'>
+              <Button href="#" bg="transparent">
                 Projects
                 <Icon
                   iconId="eye"
@@ -39,14 +38,8 @@ export const Hero = () => {
                 />
               </Button>
             </Flex>
-          </Wrapp>
-          <HeroImage
-            src={photo}
-            alt="My photo"
-            width="100%"
-            maxWidth="444px"
-            height="444px"
-          />
+          </Block>
+          <img src={photo} alt="My Photo" />
         </Flex>
       </Container>
     </StyledHero>

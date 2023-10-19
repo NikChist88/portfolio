@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Container } from '../../../components/Container'
 import { SectionTitle } from '../../../components/SectionTitle.styled'
 import { ProjectsItems } from './ProjectsItems'
-import { projectsItems } from '../../../data/projectsItems'
+import { projectsItems } from '../../../data/data'
 
 export const Projects = () => {
   return (
@@ -20,6 +20,8 @@ export const Projects = () => {
 }
 
 const StyledProjects = styled.section`
+  padding: 40px 0;
+
   h2 {
     margin-bottom: 16px;
   }

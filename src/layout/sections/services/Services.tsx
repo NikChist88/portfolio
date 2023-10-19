@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Container } from '../../../components/Container'
 import { SectionTitle } from '../../../components/SectionTitle.styled'
 import { ServicesItems } from './ServicesItems'
-import servicesItems from '../../../data/servicesItems.json'
+import { servicesItems } from '../../../data/data'
 
 export const Services = () => {
   return (

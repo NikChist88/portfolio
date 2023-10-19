@@ -22,10 +22,12 @@ export const MenuItem = styled.li`
     &::before {
       transform: scale(1);
     }
+
     ${MenuLinkMask} {
       transition: all ease-in 0.3s;
       transform: skewX(10deg) translateX(2px);
       color: #7562e0;
+      
       & + ${MenuLinkMask} {
         transform: skewX(10deg) translateX(-2px);
       }

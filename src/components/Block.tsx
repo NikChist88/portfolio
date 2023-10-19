@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
-type WrappPropsType = {
+type BlockPropsType = {
   maxWidth?: string
 }
 
-export const Wrapp = styled.div<WrappPropsType>`
+export const Block = styled.div<BlockPropsType>`
   max-width: ${({ maxWidth }) => maxWidth};
 `

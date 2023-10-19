@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { SectionTitle } from '../../../components/SectionTitle.styled'
 import { Container } from '../../../components/Container'
 import { AboutSkills } from './AboutSkills'
-import skillsItems from '../../../data/skillsItems.json'
+import { aboutItems } from '../../../data/data'
 
 export const About = () => {
   return (
@@ -19,7 +19,7 @@ export const About = () => {
           <span>5+</span>Years of experience. Specialised in building apps,
           while ensuring a seamless web experience for end users.
         </StyledAboutDescription>
-        <AboutSkills items={skillsItems} />
+        <AboutSkills items={aboutItems} />
       </Container>
     </StyledAbout>
   )
