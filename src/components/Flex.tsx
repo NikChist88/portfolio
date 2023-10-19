@@ -9,7 +9,6 @@ type FlexPropsType = {
   gap?: string
   width?: string
   height?: string
-  marginTop?: string
 }
 
 export const Flex = styled.div<FlexPropsType>`
@@ -22,5 +21,4 @@ export const Flex = styled.div<FlexPropsType>`
   gap: ${({ gap }) => gap};
   width: ${({ width }) => width};
   height: ${({ height }) => height};
-  margin-top: ${({ marginTop }) => marginTop};
 `

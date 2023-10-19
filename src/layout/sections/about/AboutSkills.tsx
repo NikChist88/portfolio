@@ -1,5 +1,5 @@
 import { Icon } from '../../../components/icons/Icon'
-import { SkillTitle } from '../../../components/SkillTitle.styled'
+import { SkillTitle } from '../../../components/SkillTitle'
 import { StyledAboutSkills } from './AboutSkills.styled'
 
 type AboutSkillsPropsType = {

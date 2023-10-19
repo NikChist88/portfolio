@@ -1,9 +1,8 @@
 import styled from 'styled-components'
 import { Flex } from '../../../components/Flex'
 import { Button } from '../../../components/Button'
-import { SkillTitle } from '../../../components/SkillTitle.styled'
+import { SkillTitle } from '../../../components/SkillTitle'
 import { ProjectsItem } from '../projects/ProjectsItem.styled'
-import { Image } from '../../../components/Image'
 
 type ProjectsItemsPropsType = {
   id: number
@@ -24,7 +23,7 @@ export const ProjectsItems = (props: {
             <img src={item.src} alt={item.alt} />
             <SkillTitle>{item.title}</SkillTitle>
             <p>{item.description}</p>
-            <Flex justify='space-between' gap='0 10px'>
+            <Flex justify="space-between" gap="0 10px">
               <Button href="#" primary height="43px" width="145px">
                 View Live
               </Button>

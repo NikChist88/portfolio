@@ -1,18 +1,18 @@
 import styled from 'styled-components'
 
 type ImagePropsType = {
-  src: string
-  alt: string
   height?: string
+  minHeight?: string
+  width?: string
+  maxWidth?: string
+  zIndex?: string
 }
 
-export const Image = (props: ImagePropsType) => {
-  return (
-    <></>
-  )
-}
-
-const StyledImage = styled.img<ImagePropsType>`
+export const Image = styled.img<ImagePropsType>`
   object-fit: cover;
-  width: 100%;
+  height: ${({ height }) => height};
+  min-height: ${({ minHeight }) => minHeight};
+  width: ${({ width }) => width};
+  max-width: ${({ maxWidth }) => maxWidth};
+  z-index: ${({ zIndex }) => zIndex};
 `

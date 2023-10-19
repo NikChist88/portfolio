@@ -22,11 +22,6 @@ ul {
   list-style: none;
 }
 
-html,
-body {
-  min-height: 100%;
-}
-
 body {
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;

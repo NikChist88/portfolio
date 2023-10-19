@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { Icon } from '../../../components/icons/Icon'
-import { SkillTitle } from '../../../components/SkillTitle.styled'
+import { SkillTitle } from '../../../components/SkillTitle'
 import { ServicesItem } from './ServicesItem.styled'
 
 type ServicesItemsPropsType = {

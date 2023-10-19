@@ -1,6 +1,6 @@
 import { Container } from '../../components/Container'
 import { Flex } from '../../components/Flex'
-import { Logo } from '../../components/Logo.styled'
+import { Logo } from '../../components/Logo'
 import { Navigation } from '../../components/navigation/Navigation'
 import { menuItems } from '../../data/data'
 import { StyledHeader } from './Header.styled'

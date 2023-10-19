@@ -1,7 +1,8 @@
 import styled from 'styled-components'
-import { SectionTitle } from '../../../components/SectionTitle.styled'
+import { SectionTitle } from '../../../components/SectionTitle'
 import { Container } from '../../../components/Container'
 import { AboutSkills } from './AboutSkills'
+import { AboutDescription } from './AboutDescription.styled'
 import { aboutItems } from '../../../data/data'
 
 export const About = () => {
@@ -15,10 +16,10 @@ export const About = () => {
           Development and advance i have core understanding of advance UI design
           principles. Here are the major skiills i have.
         </StyledAboutText>
-        <StyledAboutDescription>
+        <AboutDescription>
           <span>5+</span>Years of experience. Specialised in building apps,
           while ensuring a seamless web experience for end users.
-        </StyledAboutDescription>
+        </AboutDescription>
         <AboutSkills items={aboutItems} />
       </Container>
     </StyledAbout>
@@ -26,24 +27,10 @@ export const About = () => {
 }
 
 const StyledAbout = styled.section`
-  padding-bottom: 40px;
+  padding: 175px 0 40px;
 `
 
 const StyledAboutText = styled.p`
   line-height: 32px;
   margin-top: 8px;
-`
-
-const StyledAboutDescription = styled.p`
-  display: flex;
-  align-items: center;
-  font-size: 24px;
-  margin-top: 25px;
-  
-  span {
-    font-size: 96px;
-    font-weight: 600;
-    color: #7562e0;
-    margin-right: 25px;
-  }
 `

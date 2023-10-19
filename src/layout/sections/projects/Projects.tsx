@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { Container } from '../../../components/Container'
-import { SectionTitle } from '../../../components/SectionTitle.styled'
+import { SectionTitle } from '../../../components/SectionTitle'
 import { ProjectsItems } from './ProjectsItems'
 import { projectsItems } from '../../../data/data'
 
