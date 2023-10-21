@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { SkillTitle } from '../../../components/SkillTitle'
 
 export const ServicesItem = styled.li`
   min-height: 340px;
@@ -12,30 +13,16 @@ export const ServicesItem = styled.li`
   border: 3px solid #ffffff;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
   color: #ffffff;
-  transition: border-color ease-in 0.3s;
 
-  &:hover {
+  &:nth-child(odd) {
     border-color: #7562e0;
-    h3 {
-      color: #7562e0;
+    ${SkillTitle} {
+      color: #ffffff;
     }
   }
 
-  svg {
-    margin-bottom: 8px;
-  }
-
-  h3 {
-    margin-bottom: 16px;
-    transition: color ease-in 0.3s;
-  }
-
-  a {
-    color: #ffffff;
-  }
-
-  p {
-    font-size: 17px;
-    line-height: 32px;
+  ${SkillTitle} {
+    margin: 8px 0 16px;
+    color: #7562e0;
   }
 `

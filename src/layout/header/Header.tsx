@@ -9,7 +9,12 @@ export const Header = () => {
   return (
     <StyledHeader>
       <Container>
-        <Flex align="center" justify="space-between" height="100%">
+        <Flex
+          align="center"
+          justify="space-between"
+          space="nowrap"
+          height="100%"
+        >
           <Logo href="#">Jayjay Dinero</Logo>
           <Navigation items={menuItems} />
         </Flex>

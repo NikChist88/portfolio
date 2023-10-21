@@ -1,12 +1,9 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 type ButtonPropsType = {
-  primary?: boolean
-  icon?: string
+  outline?: boolean
   height?: string
-  width?: string
-  bg?: string
-  border?: string
+  mWidth?: string
 }
 
 export const Button = styled.a<ButtonPropsType>`
@@ -17,16 +14,31 @@ export const Button = styled.a<ButtonPropsType>`
   font-weight: 600;
   border-radius: 8px;
   color: #fff;
+  background-color: #7562e0;
+  border: none;
   transition: background-color ease-in 0.3s, border-color ease-in 0.3s;
   cursor: pointer;
-  border: ${({ border }) => border || '2px solid #7562e0'};
-  background-color: ${({ bg }) => bg || '#7562e0'};
-  height: ${({ height }) => height || '48px'};
-  width: ${({ width }) => width || '160px'};
+  width: 100%;
+  max-width: ${({ mWidth }) => mWidth || '160px'};
+  height: ${({ height }) => height || '50px'};
+
+  ${({ outline }) =>
+    outline &&
+    css`
+      background-color: transparent;
+      border: 2px solid #7562e0;
+    `}
 
   &:hover {
-    background-color: ${({ primary }) => (primary ? '#50439b' : '#7562e0')};
-    border-color: ${({ primary }) => (primary ? '#50439b' : '#7562e0')};
+    ${({ outline }) =>
+      outline
+        ? css`
+            background-color: #7562e0;
+            border-color: #7562e0;
+          `
+        : css`
+            background-color: #5345a1;
+          `}
   }
 
   svg {

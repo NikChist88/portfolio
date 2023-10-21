@@ -6,13 +6,13 @@ import { projectsItems } from '../../../data/data'
 
 export const Projects = () => {
   return (
-    <StyledProjects>
+    <StyledProjects id="projects">
       <Container>
         <SectionTitle>Featured projects:</SectionTitle>
-        <p>
+        <ProjectsText>
           I have worked on many projects over the course of being a Web
           Developer, here are a few of my live, real-world projects
-        </p>
+        </ProjectsText>
         <ProjectsItems items={projectsItems} />
       </Container>
     </StyledProjects>
@@ -20,13 +20,12 @@ export const Projects = () => {
 }
 
 const StyledProjects = styled.section`
-  padding: 40px 0;
+  padding: 80px 0;
 
-  h2 {
+  ${SectionTitle} {
     margin-bottom: 16px;
   }
-
-  p {
-    margin-bottom: 32px;
-  }
+`
+const ProjectsText = styled.p`
+  margin-bottom: 32px;
 `

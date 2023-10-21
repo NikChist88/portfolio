@@ -7,7 +7,7 @@ import { aboutItems } from '../../../data/data'
 
 export const About = () => {
   return (
-    <StyledAbout>
+    <StyledAbout id='about'>
       <Container>
         <SectionTitle>About me:</SectionTitle>
         <StyledAboutText>
@@ -27,7 +27,7 @@ export const About = () => {
 }
 
 const StyledAbout = styled.section`
-  padding: 175px 0 40px;
+  padding: 175px 0 60px;
 `
 
 const StyledAboutText = styled.p`

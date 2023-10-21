@@ -6,7 +6,7 @@ import { servicesItems } from '../../../data/data'
 
 export const Services = () => {
   return (
-    <StyledServices>
+    <StyledServices id='services'>
       <Container>
         <SectionTitle>The services i offer:</SectionTitle>
         <ServicesItems items={servicesItems} />
@@ -16,9 +16,9 @@ export const Services = () => {
 }
 
 const StyledServices = styled.section`
-  padding: 40px 0;
+  padding: 80px 0;
 
-  h2 {
+  ${SectionTitle} {
     margin-bottom: 32px;
   }
 `

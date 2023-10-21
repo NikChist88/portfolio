@@ -1,13 +1,15 @@
-import { Icon } from '../../../components/icons/Icon'
+import styled from 'styled-components'
+import { Icon } from '../../../components/Icon'
 import { SkillTitle } from '../../../components/SkillTitle'
 import { StyledAboutSkills } from './AboutSkills.styled'
+import { AboutSkillsItem } from './AboutSkillsItem.styled'
 
 type AboutSkillsPropsType = {
   id: number
   iconId: string
-  iconWidth: string
-  iconHeight: string
-  viewBox: string
+  width: string
+  height: string
+  viewbox: string
   title: string
 }
 
@@ -16,19 +18,26 @@ export const AboutSkills = (props: { items: Array<AboutSkillsPropsType> }) => {
     <StyledAboutSkills>
       {props.items.map((item) => {
         return (
-          <li key={item.id}>
-            <a href="#">
+          <AboutSkillsItem key={item.id}>
+            <AboutSkillsLink href="#">
               <Icon
                 iconId={item.iconId}
-                width={item.iconWidth}
-                height={item.iconHeight}
-                viewBox={item.viewBox}
+                width={item.width}
+                height={item.height}
+                viewbox={item.viewbox}
+                fill="none"
+                stroke="#ffffff"
               />
               <SkillTitle>{item.title}</SkillTitle>
-            </a>
-          </li>
+            </AboutSkillsLink>
+          </AboutSkillsItem>
         )
       })}
     </StyledAboutSkills>
   )
 }
+
+const AboutSkillsLink = styled.a`
+  position: relative;
+  top: 73px;
+`
