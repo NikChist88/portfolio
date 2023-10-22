@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Logo } from '../../components/Logo'
+import { HeaderLogo } from './HeaderLogo.styled'
 
 export const StyledHeader = styled.header`
   position: fixed;
@@ -11,7 +11,7 @@ export const StyledHeader = styled.header`
   height: 1px;
   background-color: #181824;
 
-  ${Logo} {
+  ${HeaderLogo} {
     margin-right: 30px;
   }
 `

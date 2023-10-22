@@ -1,7 +1,7 @@
 import { Container } from '../../components/Container'
 import { Flex } from '../../components/Flex'
-import { Logo } from '../../components/Logo'
-import { Navigation } from '../../components/navigation/Navigation'
+import { HeaderLogo } from './HeaderLogo.styled'
+import { Navigation } from './navigation/Navigation'
 import { menuItems } from '../../data/data'
 import { StyledHeader } from './Header.styled'
 
@@ -15,7 +15,7 @@ export const Header = () => {
           space="nowrap"
           height="100%"
         >
-          <Logo href="#">Jayjay Dinero</Logo>
+          <HeaderLogo href="#">Jayjay Dinero</HeaderLogo>
           <Navigation items={menuItems} />
         </Flex>
       </Container>

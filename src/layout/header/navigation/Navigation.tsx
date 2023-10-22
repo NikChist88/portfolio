@@ -1,5 +1,8 @@
 import styled from 'styled-components'
-import { Icon } from '../Icon'
+import { StyledNavigation } from './Navigation.styled'
+import { Menu } from './Menu.styled'
+import { MenuLink } from './MenuLink.styled'
+import { Icon } from '../../../components/Icon'
 
 type MenuPropsType = {
   id?: number
@@ -23,36 +26,6 @@ export const Navigation = (props: { items: Array<MenuPropsType> }) => {
     </StyledNavigation>
   )
 }
-
-const StyledNavigation = styled.nav`
-  svg {
-    display: none;
-    
-    @media screen and (max-width: 768px) {
-      display: block;
-    }
-  }
-`
-
-const Menu = styled.ul`
-  display: flex;
-  white-space: nowrap;
-  column-gap: 52px;
-
-  @media screen and (max-width: 992px) {
-    column-gap: 22px;
-  }
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
-`
-
-const MenuLink = styled.a`
-  font-size: 18px;
-  font-weight: 600;
-  color: #fff;
-  transition: color ease-in 0.3s;
-`
 
 const MenuItem = styled.li`
   &:hover > ${MenuLink} {
