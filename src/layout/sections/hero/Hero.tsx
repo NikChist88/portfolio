@@ -1,4 +1,3 @@
-import styled from 'styled-components'
 import { StyledHero } from './Hero.styled'
 import { Container } from '../../../components/Container'
 import { Flex } from '../../../components/Flex'

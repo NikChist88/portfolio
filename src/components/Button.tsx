@@ -34,7 +34,6 @@ export const Button = styled.a<ButtonPropsType>`
       outline
         ? css`
             background-color: #7562e0;
-            border-color: #7562e0;
           `
         : css`
             background-color: #5345a1;
