@@ -1,6 +1,4 @@
 import styled from 'styled-components'
-import { Flex } from '../../../components/Flex'
-import { Block } from '../../../components/Block'
 
 export const StyledHero = styled.section`
   padding: 80px 0 0px;
@@ -16,10 +14,14 @@ export const StyledHero = styled.section`
     height: 128px;
     background-color: #181824;
     z-index: 2;
+    
+    @media screen and (max-width: 768px) {
+      bottom: -60px;
+    }
+    @media screen and (max-width: 480px) {
+      height: 64px;
+      bottom: 0;
+    }
   }
 
-  ${Block} {
-    max-width: 435px;
-    padding-bottom: 50px;
-  }
 `

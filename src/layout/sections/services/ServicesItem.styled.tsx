@@ -25,4 +25,9 @@ export const ServicesItem = styled.li`
     margin: 8px 0 16px;
     color: #7562e0;
   }
+
+  @media screen and (max-width: 480px) {
+    min-height: 300px;
+    padding: 20px;
+  }
 `

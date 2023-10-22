@@ -27,6 +27,7 @@ export const Navigation = (props: { items: Array<MenuPropsType> }) => {
 const StyledNavigation = styled.nav`
   svg {
     display: none;
+    
     @media screen and (max-width: 768px) {
       display: block;
     }
@@ -37,6 +38,7 @@ const Menu = styled.ul`
   display: flex;
   white-space: nowrap;
   column-gap: 52px;
+
   @media screen and (max-width: 992px) {
     column-gap: 22px;
   }

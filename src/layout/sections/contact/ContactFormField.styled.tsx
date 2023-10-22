@@ -9,4 +9,8 @@ export const ContactFormField = styled.input`
   padding: 16px;
   color: #fff;
   font-size: 16px;
+
+  @media screen and (max-width: 768px) {
+    max-width: 100%;
+  }
 `

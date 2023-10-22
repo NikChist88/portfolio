@@ -38,6 +38,10 @@ const StyledContactSocials = styled.ul`
   display: flex;
   gap: 0 16px;
 
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+  }
+
   svg {
     transition: fill ease-in 0.3s;
     &:hover {

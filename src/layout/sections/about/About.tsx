@@ -7,7 +7,7 @@ import { aboutItems } from '../../../data/data'
 
 export const About = () => {
   return (
-    <StyledAbout id='about'>
+    <StyledAbout id="about">
       <Container>
         <SectionTitle>About me:</SectionTitle>
         <StyledAboutText>
@@ -28,9 +28,20 @@ export const About = () => {
 
 const StyledAbout = styled.section`
   padding: 175px 0 60px;
+
+  @media screen and (max-width: 768px) {
+    padding: 100px 0 60px;
+  }
+  @media screen and (max-width: 480px) {
+    padding: 40px 0 40px;
+  }
+
+  ${SectionTitle} {
+    margin-bottom: 10px;
+  }
 `
 
 const StyledAboutText = styled.p`
   line-height: 32px;
-  margin-top: 8px;
+  margin-bottom: 25px;
 `

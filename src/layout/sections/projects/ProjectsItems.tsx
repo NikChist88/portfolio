@@ -3,6 +3,7 @@ import { Flex } from '../../../components/Flex'
 import { Button } from '../../../components/Button'
 import { SkillTitle } from '../../../components/SkillTitle'
 import { ProjectsItem } from '../projects/ProjectsItem.styled'
+import { ProjectsImage } from './ProjectsImage.styled'
 
 type ProjectsItemsPropsType = {
   id: number
@@ -20,7 +21,9 @@ export const ProjectsItems = (props: {
       {props.items.map((item) => {
         return (
           <ProjectsItem key={item.id}>
-            <img src={item.src} alt={item.alt} />
+            <ProjectsImage>
+              <img src={item.src} alt={item.alt} />
+            </ProjectsImage>
             <SkillTitle>{item.title}</SkillTitle>
             <ProjectsText>{item.description}</ProjectsText>
             <Flex justify="space-between" gap="0 10px">
@@ -40,17 +43,10 @@ export const ProjectsItems = (props: {
 
 const StyledProjectsItems = styled.ul`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
   gap: 16px;
-
-  img {
-    width: 100%;
-    height: 170px;
-    margin-bottom: 16px;
-    border-radius: 8px;
-    object-fit: cover;
-  }
 `
+
 const ProjectsText = styled.p`
   flex-grow: 1;
   margin-bottom: 24px;

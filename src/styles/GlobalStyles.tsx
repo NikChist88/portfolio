@@ -23,10 +23,11 @@ ul {
 }
 
 body {
+  min-width: 320px;
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 18px;
+  font-size: calc((100vw - 320px) / (1920 - 320) * (18 - 14) + 14px);
   font-weight: 500;
   color: #fff;
   background-color: #1a1a29;
