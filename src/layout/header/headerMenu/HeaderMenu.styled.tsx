@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const StyledNavigation = styled.nav`
+export const StyledHeaderMenu = styled.nav`
   svg {
     display: none;
 
