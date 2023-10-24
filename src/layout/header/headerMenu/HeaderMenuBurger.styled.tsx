@@ -1,12 +1,14 @@
-import styled, {css} from "styled-components";
+import styled, { css } from 'styled-components'
 
-export const HeaderMenuBurger = styled.div<{ isOpen: boolean }>`
-  z-index: 2;
+export const HeaderMenuBurger = styled.button<{ isOpen: boolean }>`
   display: none;
+  background-color: transparent;
+  position: relative;
+  z-index: 5;
 
   @media screen and (max-width: 768px) {
     display: block;
-    
+
     ${({ isOpen }) =>
       isOpen
         ? css`

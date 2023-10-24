@@ -1,18 +1,32 @@
+import { useState } from 'react'
 import styled from 'styled-components'
-import { StyledHeaderMenu } from './HeaderMenu.styled'
 import { HeaderMenuList } from './HeaderMenuList.styled'
 import { HeaderMenuLink } from './HeaderMenuLink.styled'
+import { Burger } from '../../../components/Burger'
 
-type MenuPropsType = {
+type HeaderMenuPropsType = {
   id?: number
   anchor?: string
   item?: string
 }
 
-export const HeaderMenu = (props: { items: Array<MenuPropsType> }) => {
+export const HeaderMenu = (props: { items: Array<HeaderMenuPropsType> }) => {
+  const [openMenu, setOpenMenu] = useState(false)
+
+  const toggleMenu = () => {
+    setOpenMenu(!openMenu)
+  }
+
   return (
     <StyledHeaderMenu>
-      <HeaderMenuList role='menu' aria-label={'Menu'} isOpen={true}>
+      <HeaderMenuList
+        role="menu"
+        aria-label={'Menu'}
+        isOpen={openMenu}
+        onClick={() => {
+          setOpenMenu(false)
+        }}
+      >
         {props.items.map((item) => {
           return (
             <HeaderMenuItem role="menuitem" key={item.id}>
@@ -21,9 +35,16 @@ export const HeaderMenu = (props: { items: Array<MenuPropsType> }) => {
           )
         })}
       </HeaderMenuList>
+      <Burger isOpen={openMenu} onClick={toggleMenu}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </Burger>
     </StyledHeaderMenu>
   )
 }
+
+const StyledHeaderMenu = styled.nav``
 
 const HeaderMenuItem = styled.li`
   &:hover > ${HeaderMenuLink} {

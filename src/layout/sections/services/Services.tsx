@@ -18,7 +18,7 @@ export const Services = () => {
 const StyledServices = styled.section`
   padding: 80px 0;
   
-  @media screen and (max-width: 576px) {
+  @media screen and (max-width: 768px) {
     padding: 40px 0;
   }
 

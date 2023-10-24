@@ -9,17 +9,9 @@ export const StyledHeader = styled.header`
   min-height: 80px;
   height: 1px;
   background-color: #181824;
-  z-index: 1000;
+  z-index: 100;
 
   ${HeaderLogo} {
     margin-right: 30px;
-  }
-
-  svg {
-    display: none;
-    
-    @media screen and (max-width: 768px) {
-      display: block;
-    }
   }
 `

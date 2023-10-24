@@ -13,7 +13,7 @@ export const StyledHero = styled.section`
     width: 100%;
     height: 128px;
     background-color: #181824;
-    z-index: 2;
+    z-index: 1;
     
     @media screen and (max-width: 768px) {
       bottom: -60px;
