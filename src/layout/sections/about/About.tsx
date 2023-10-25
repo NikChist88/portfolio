@@ -4,6 +4,7 @@ import { Container } from '../../../components/Container'
 import { AboutSkills } from './AboutSkills'
 import { AboutDescription } from './AboutDescription.styled'
 import { aboutItems } from '../../../data/data'
+import decor from '../../../assets/images/decor.jpg'
 
 export const About = () => {
   return (
@@ -27,13 +28,12 @@ export const About = () => {
 }
 
 const StyledAbout = styled.section`
-  padding: 175px 0 60px;
+  padding: 190px 0 80px;
+  background: url('${decor}') no-repeat top / 100% 130px;
 
   @media screen and (max-width: 768px) {
-    padding: 100px 0 60px;
-  }
-  @media screen and (max-width: 480px) {
-    padding: 40px 0 40px;
+    padding: 100px 0 40px;
+    background-size: 100% 75px;
   }
 
   ${SectionTitle} {

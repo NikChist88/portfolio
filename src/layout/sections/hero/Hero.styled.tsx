@@ -5,23 +5,4 @@ export const StyledHero = styled.section`
   min-height: 640px;
   height: 1px;
   position: relative;
-
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: -120px;
-    width: 100%;
-    height: 128px;
-    background-color: #181824;
-    z-index: 1;
-    
-    @media screen and (max-width: 768px) {
-      bottom: -60px;
-    }
-    @media screen and (max-width: 480px) {
-      height: 64px;
-      bottom: 0;
-    }
-  }
-
 `

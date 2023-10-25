@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import styled from 'styled-components'
-import { HeaderMenuList } from './HeaderMenuList.styled'
-import { HeaderMenuLink } from './HeaderMenuLink.styled'
 import { HeaderMenuBurger } from './HeaderMenuBurger.styled'
+import { HeaderMenuLink } from './HeaderMenuLink.styled'
+import { HeaderMenuList } from './HeaderMenuList.styled'
 
 type HeaderMenuPropsType = {
   id?: number

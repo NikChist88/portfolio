@@ -1,20 +1,20 @@
-import { StyledHero } from './Hero.styled'
+import photo from '../../../assets/images/photo.png'
+import { Button } from '../../../components/Button'
 import { Container } from '../../../components/Container'
 import { Flex } from '../../../components/Flex'
-import { HeroText } from './HeroText.styled'
-import { HeroName } from './HeroName.styled'
-import { HeroDescription } from './HeroDescription.styled'
-import { Button } from '../../../components/Button'
 import { Icon } from '../../../components/Icon'
+import { StyledHero } from './Hero.styled'
 import { HeroContent } from './HeroContent.styled'
+import { HeroDescription } from './HeroDescription.styled'
 import { HeroImage } from './HeroImage.styled'
-import photo from '../../../assets/images/photo.png'
+import { HeroName } from './HeroName.styled'
+import { HeroText } from './HeroText.styled'
 
 export const Hero = () => {
   return (
     <StyledHero id="home">
       <Container>
-        <Flex justify="space-between" align="center" height="100%">
+        <Flex justify="space-between" align="flex-end" height="100%">
           <HeroContent>
             <HeroText>Hello, i'm</HeroText>
             <HeroName>Jayjay D. Dinero</HeroName>
