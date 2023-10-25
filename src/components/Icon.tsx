@@ -1,3 +1,4 @@
+
 import sprite from '../assets/icons/sprite.svg'
 
 type IconPropsType = {

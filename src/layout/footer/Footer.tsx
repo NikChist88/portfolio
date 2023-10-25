@@ -31,7 +31,7 @@ const FooterLink = styled.p`
 
   svg {
     margin-right: 10px;
-    fill: #7562e0;
+    fill: #fff;
   }
 
   a {

@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components'
 export const HeaderMenuList = styled.ul<{ isOpen: boolean }>`
   display: flex;
   white-space: nowrap;
-  column-gap: 52px;
+  column-gap: 50px;
 
   @media screen and (max-width: 992px) {
     column-gap: 22px;

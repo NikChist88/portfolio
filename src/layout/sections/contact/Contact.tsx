@@ -26,7 +26,7 @@ export const Contact = () => {
               Contact me, let’s make magic together
             </ContactFormTitle>
             <ContactFormField placeholder="Name" />
-            <ContactFormField placeholder="Email" />
+            <ContactFormField type='email' placeholder="Email" />
             <ContactFormField as={'textarea'} placeholder="Message" />
             <Button as={'button'} mWidth="175px">
               Send

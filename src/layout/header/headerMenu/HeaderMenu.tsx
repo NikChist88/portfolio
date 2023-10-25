@@ -2,7 +2,7 @@ import { useState } from 'react'
 import styled from 'styled-components'
 import { HeaderMenuList } from './HeaderMenuList.styled'
 import { HeaderMenuLink } from './HeaderMenuLink.styled'
-import { Burger } from '../../../components/Burger'
+import { HeaderMenuBurger } from './HeaderMenuBurger.styled'
 
 type HeaderMenuPropsType = {
   id?: number
@@ -18,7 +18,7 @@ export const HeaderMenu = (props: { items: Array<HeaderMenuPropsType> }) => {
   }
 
   return (
-    <StyledHeaderMenu>
+    <nav>
       <HeaderMenuList
         role="menu"
         aria-label={'Menu'}
@@ -35,16 +35,14 @@ export const HeaderMenu = (props: { items: Array<HeaderMenuPropsType> }) => {
           )
         })}
       </HeaderMenuList>
-      <Burger isOpen={openMenu} onClick={toggleMenu}>
+      <HeaderMenuBurger isOpen={openMenu} onClick={toggleMenu}>
         <span></span>
         <span></span>
         <span></span>
-      </Burger>
-    </StyledHeaderMenu>
+      </HeaderMenuBurger>
+    </nav>
   )
 }
-
-const StyledHeaderMenu = styled.nav``
 
 const HeaderMenuItem = styled.li`
   &:hover > ${HeaderMenuLink} {
