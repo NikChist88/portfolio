@@ -10,7 +10,7 @@ import { HeroImage } from './HeroImage.styled'
 import { HeroName } from './HeroName.styled'
 import { HeroText } from './HeroText.styled'
 
-export const Hero = () => {
+export const Hero: React.FC = () => {
   return (
     <StyledHero id="home">
       <Container>

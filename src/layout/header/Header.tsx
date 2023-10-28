@@ -1,13 +1,12 @@
 import { Container } from '../../components/Container'
 import { Flex } from '../../components/Flex'
-import { HeaderLogo } from './HeaderLogo.styled'
 import { HeaderMenu } from './headerMenu/HeaderMenu'
 import { menuItems } from '../../data/data'
-import { StyledHeader } from './Header.styled'
+import { S } from './Header.styled'
 
-export const Header = () => {
+export const Header: React.FC = () => {
   return (
-    <StyledHeader>
+    <S.Header>
       <Container>
         <Flex
           align="center"
@@ -15,10 +14,10 @@ export const Header = () => {
           space="nowrap"
           height="100%"
         >
-          <HeaderLogo href="#">Jayjay Dinero</HeaderLogo>
+          <S.HeaderLogo href="#">Jayjay Dinero</S.HeaderLogo>
           <HeaderMenu items={menuItems} />
         </Flex>
       </Container>
-    </StyledHeader>
+    </S.Header>
   )
 }
