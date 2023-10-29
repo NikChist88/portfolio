@@ -3,24 +3,19 @@ import { Button } from '../../../components/Button'
 import { Container } from '../../../components/Container'
 import { Flex } from '../../../components/Flex'
 import { Icon } from '../../../components/Icon'
-import { StyledHero } from './Hero.styled'
-import { HeroContent } from './HeroContent.styled'
-import { HeroDescription } from './HeroDescription.styled'
-import { HeroImage } from './HeroImage.styled'
-import { HeroName } from './HeroName.styled'
-import { HeroText } from './HeroText.styled'
+import { S } from './Hero_Styles'
 
 export const Hero: React.FC = () => {
   return (
-    <StyledHero id="home">
+    <S.Hero id="home">
       <Container>
         <Flex justify="space-between" align="flex-end" height="100%">
-          <HeroContent>
-            <HeroText>Hello, i'm</HeroText>
-            <HeroName>Jayjay D. Dinero</HeroName>
-            <HeroDescription>
+          <S.HeroContent>
+            <S.HeroText>Hello, i'm</S.HeroText>
+            <S.HeroName>Jayjay D. Dinero</S.HeroName>
+            <S.HeroDescription>
               A Web Developer. I create seamless web experiences for end-users.
-            </HeroDescription>
+            </S.HeroDescription>
             <Flex gap="32px">
               <Button href="#">
                 About me
@@ -43,12 +38,12 @@ export const Hero: React.FC = () => {
                 />
               </Button>
             </Flex>
-          </HeroContent>
-          <HeroImage>
+          </S.HeroContent>
+          <S.HeroImage>
             <img src={photo} alt="Photo" />
-          </HeroImage>
+          </S.HeroImage>
         </Flex>
       </Container>
-    </StyledHero>
+    </S.Hero>
   )
 }

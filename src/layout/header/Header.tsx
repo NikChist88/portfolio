@@ -2,7 +2,7 @@ import { Container } from '../../components/Container'
 import { Flex } from '../../components/Flex'
 import { HeaderMenu } from './headerMenu/HeaderMenu'
 import { menuItems } from '../../data/data'
-import { S } from './Header.styled'
+import { S } from './Header_Styles'
 
 export const Header: React.FC = () => {
   return (

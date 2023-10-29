@@ -1,4 +1,3 @@
-
 import sprite from '../assets/icons/sprite.svg'
 
 type IconPropsType = {
@@ -10,7 +9,7 @@ type IconPropsType = {
   stroke?: string
 }
 
-export const Icon = (props: IconPropsType) => {
+export const Icon: React.FC<IconPropsType> = (props: IconPropsType) => {
   return (
     <svg
       width={props.width}

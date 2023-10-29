@@ -1,28 +1,16 @@
-import styled from 'styled-components'
 import { Container } from '../../../components/Container'
 import { SectionTitle } from '../../../components/SectionTitle'
 import { ServicesItems } from './ServicesItems'
 import { servicesItems } from '../../../data/data'
+import { S } from './Services_Styles'
 
-export const Services = () => {
+export const Services: React.FC = () => {
   return (
-    <StyledServices id="services">
+    <S.Services id="services">
       <Container>
         <SectionTitle>The services i offer:</SectionTitle>
         <ServicesItems items={servicesItems} />
       </Container>
-    </StyledServices>
+    </S.Services>
   )
 }
-
-const StyledServices = styled.section`
-  padding: 80px 0;
-  
-  @media screen and (max-width: 768px) {
-    padding: 40px 0;
-  }
-
-  ${SectionTitle} {
-    margin-bottom: 32px;
-  }
-`

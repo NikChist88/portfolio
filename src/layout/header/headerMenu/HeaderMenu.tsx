@@ -1,5 +1,6 @@
-import { useState } from 'react'
-import { S } from './HeaderMenu.styled'
+import { useState, useEffect } from 'react'
+import { MenuBtn } from '../../../components/MenuBtn'
+import { S } from './HeaderMenu_Styles'
 
 type HeaderMenuPropsType = {
   id?: number
@@ -10,11 +11,20 @@ type HeaderMenuPropsType = {
 export const HeaderMenu: React.FC<{
   items: Array<HeaderMenuPropsType>
 }> = (props: { items: Array<HeaderMenuPropsType> }) => {
-  const [openMenu, setOpenMenu] = useState(false)
 
+  const [openMenu, setOpenMenu] = useState(false)
   const toggleMenu = () => {
     setOpenMenu(!openMenu)
   }
+
+  const [width, setWidth] = useState(window.innerWidth)
+  const breakpoint = 768
+
+  useEffect(() => {
+    const handleWindowResize = () => setWidth(window.innerWidth)
+    window.addEventListener('resize', handleWindowResize)
+    return () => window.removeEventListener('resize', handleWindowResize)
+  }, [])
 
   return (
     <nav>
@@ -36,11 +46,7 @@ export const HeaderMenu: React.FC<{
           )
         })}
       </S.HeaderMenuList>
-      <S.HeaderMenuBurger isOpen={openMenu} onClick={toggleMenu}>
-        <span></span>
-        <span></span>
-        <span></span>
-      </S.HeaderMenuBurger>
+      {width < breakpoint && <MenuBtn isOpen={openMenu} onClick={toggleMenu} />}
     </nav>
   )
 }

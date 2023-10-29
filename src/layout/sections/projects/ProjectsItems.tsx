@@ -1,9 +1,7 @@
-import styled from 'styled-components'
 import { Flex } from '../../../components/Flex'
 import { Button } from '../../../components/Button'
 import { SkillTitle } from '../../../components/SkillTitle'
-import { ProjectsItem } from '../projects/ProjectsItem.styled'
-import { ProjectsImage } from './ProjectsImage.styled'
+import { S } from './ProjectsItems_Styles'
 
 type ProjectsItemsPropsType = {
   id: number
@@ -13,19 +11,20 @@ type ProjectsItemsPropsType = {
   description: string
 }
 
-export const ProjectsItems = (props: {
+export const ProjectsItems: React.FC<{
   items: Array<ProjectsItemsPropsType>
-}) => {
+}> = (props: { items: Array<ProjectsItemsPropsType> }) => {
+  
   return (
-    <StyledProjectsItems>
+    <S.ProjectsItems>
       {props.items.map((item) => {
         return (
-          <ProjectsItem key={item.id}>
-            <ProjectsImage>
+          <S.ProjectsItem key={item.id}>
+            <S.ProjectsItemImage>
               <img src={item.src} alt={item.alt} />
-            </ProjectsImage>
+            </S.ProjectsItemImage>
             <SkillTitle>{item.title}</SkillTitle>
-            <ProjectsText>{item.description}</ProjectsText>
+            <S.ProjectsItemText>{item.description}</S.ProjectsItemText>
             <Flex justify="space-between" gap="0 10px">
               <Button href="#" height="45px" mWidth="145px">
                 View Live
@@ -34,20 +33,9 @@ export const ProjectsItems = (props: {
                 Github Repo
               </Button>
             </Flex>
-          </ProjectsItem>
+          </S.ProjectsItem>
         )
       })}
-    </StyledProjectsItems>
+    </S.ProjectsItems>
   )
 }
-
-const StyledProjectsItems = styled.ul`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-  gap: 16px;
-`
-
-const ProjectsText = styled.p`
-  flex-grow: 1;
-  margin-bottom: 24px;
-`

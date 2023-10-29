@@ -1,7 +1,17 @@
-import styled from 'styled-components'
-import { SkillTitle } from '../../../components/SkillTitle'
+import styled from "styled-components";
+import { SkillTitle } from "../../../components/SkillTitle";
 
-export const ServicesItem = styled.li`
+const ServicesItems = styled.ul`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 20px;
+`
+const ServicesText = styled.p`
+  font-size: 17px;
+  line-height: 32px;
+`
+
+const ServicesItem = styled.li`
   min-height: 340px;
   padding: 30px;
   display: flex;
@@ -31,3 +41,10 @@ export const ServicesItem = styled.li`
     padding: 20px;
   }
 `
+
+
+export const S = {
+  ServicesItems,
+  ServicesText,
+  ServicesItem
+}

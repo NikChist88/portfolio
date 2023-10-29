@@ -1,4 +1,4 @@
-import { S } from './Footer.styled'
+import { S } from './Footer_Styles'
 import { Icon } from '../../components/Icon'
 
 export const Footer: React.FC = () => {

@@ -1,8 +1,6 @@
-import styled from 'styled-components'
 import { Icon } from '../../../components/Icon'
 import { SkillTitle } from '../../../components/SkillTitle'
-import { StyledAboutSkills } from './AboutSkills.styled'
-import { AboutSkillsItem } from './AboutSkillsItem.styled'
+import { S } from './AboutSkills_Styles'
 
 type AboutSkillsPropsType = {
   id: number
@@ -13,13 +11,16 @@ type AboutSkillsPropsType = {
   title: string
 }
 
-export const AboutSkills = (props: { items: Array<AboutSkillsPropsType> }) => {
+export const AboutSkills: React.FC<{
+  items: Array<AboutSkillsPropsType>
+}> = (props: { items: Array<AboutSkillsPropsType> }) => {
+  
   return (
-    <StyledAboutSkills>
+    <S.AboutSkills>
       {props.items.map((item) => {
         return (
-          <AboutSkillsItem key={item.id}>
-            <AboutSkillsLink href="#">
+          <S.AboutSkillsItem key={item.id}>
+            <S.AboutSkillsLink href="#">
               <Icon
                 iconId={item.iconId}
                 width={item.width}
@@ -29,15 +30,10 @@ export const AboutSkills = (props: { items: Array<AboutSkillsPropsType> }) => {
                 stroke="#ffffff"
               />
               <SkillTitle>{item.title}</SkillTitle>
-            </AboutSkillsLink>
-          </AboutSkillsItem>
+            </S.AboutSkillsLink>
+          </S.AboutSkillsItem>
         )
       })}
-    </StyledAboutSkills>
+    </S.AboutSkills>
   )
 }
-
-const AboutSkillsLink = styled.a`
-  position: relative;
-  top: 73px;
-`

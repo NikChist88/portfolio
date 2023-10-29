@@ -1,26 +1,26 @@
-import styled from 'styled-components'
 import { Icon } from '../../../components/Icon'
 import { SkillTitle } from '../../../components/SkillTitle'
-import { ServicesItem } from './ServicesItem.styled'
+import { S } from './ServicesItems_Styles'
 
 type ServicesItemsPropsType = {
   id: number
   iconId: string
   width?: string
   height?: string
-  viewbox: string
-  title: string
-  description: string
+  viewbox?: string
+  title?: string
+  description?: string
 }
 
-export const ServicesItems = (props: {
+export const ServicesItems: React.FC<{
   items: Array<ServicesItemsPropsType>
-}) => {
+}> = (props: { items: Array<ServicesItemsPropsType> }) => {
+
   return (
-    <StyledServicesItems>
+    <S.ServicesItems>
       {props.items.map((item) => {
         return (
-          <ServicesItem key={item.id}>
+          <S.ServicesItem key={item.id}>
             <Icon
               iconId={item.iconId}
               width={item.width}
@@ -30,20 +30,10 @@ export const ServicesItems = (props: {
               stroke="#ffffff"
             />
             <SkillTitle>{item.title}</SkillTitle>
-            <ServicesText>{item.description}</ServicesText>
-          </ServicesItem>
+            <S.ServicesText>{item.description}</S.ServicesText>
+          </S.ServicesItem>
         )
       })}
-    </StyledServicesItems>
+    </S.ServicesItems>
   )
 }
-
-const StyledServicesItems = styled.ul`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-  gap: 20px;
-`
-const ServicesText = styled.p`
-  font-size: 17px;
-  line-height: 32px;
-`

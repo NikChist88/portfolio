@@ -1,5 +1,5 @@
-import styled from 'styled-components'
 import { Icon } from '../../../components/Icon'
+import { S } from './ContactSocials_Styles'
 
 type ConatactSocialsPropsType = {
   id: number
@@ -10,11 +10,12 @@ type ConatactSocialsPropsType = {
   viewbox: string
 }
 
-export const ContactSocials = (props: {
+export const ContactSocials: React.FC<{
   socials: Array<ConatactSocialsPropsType>
-}) => {
+}> = (props: { socials: Array<ConatactSocialsPropsType> }) => {
+  
   return (
-    <StyledContactSocials>
+    <S.ContactSocials>
       {props.socials.map((social) => {
         return (
           <li key={social.id}>
@@ -30,22 +31,6 @@ export const ContactSocials = (props: {
           </li>
         )
       })}
-    </StyledContactSocials>
+    </S.ContactSocials>
   )
 }
-
-const StyledContactSocials = styled.ul`
-  display: flex;
-  gap: 0 16px;
-
-  @media screen and (max-width: 768px) {
-    justify-content: center;
-  }
-
-  svg {
-    transition: fill ease-in 0.3s;
-    &:hover {
-      fill: #5345a1;
-    }
-  }
-`
