@@ -8,6 +8,7 @@ type MenuBtnPropsType = {
 export const MenuBtn: React.FC<MenuBtnPropsType> = (
   props: MenuBtnPropsType
 ) => {
+
   return (
     <StyledMenuBtn isOpen={props.isOpen} onClick={props.onClick}>
       <span></span>
@@ -22,7 +23,7 @@ const StyledMenuBtn = styled.button<MenuBtnPropsType>`
   width: 40px;
   background-color: transparent;
   position: relative;
-  z-index: 5;
+  z-index: 100;
 
   span {
     display: block;

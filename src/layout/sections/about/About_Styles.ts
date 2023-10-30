@@ -5,6 +5,8 @@ import { SectionTitle } from '../../../components/styled/SectionTitle'
 const About = styled.section`
   padding: 190px 0 80px;
   background: url('${decor}') no-repeat top / 100% 130px;
+  position: relative;
+  background-color: #1a1a29;
 
   @media screen and (max-width: 768px) {
     padding: 100px 0 40px;

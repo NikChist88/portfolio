@@ -5,28 +5,28 @@ import proj03 from '../assets/images/proj03.webp'
 export const menuItems = [
   {
     id: 1,
-    anchor: '#home',
-    item: 'Home'
+    href: 'home',
+    title: 'Home'
   },
   {
     id: 2,
-    anchor: '#about',
-    item: 'About me'
+    href: 'about',
+    title: 'About me'
   },
   {
     id: 3,
-    anchor: '#services',
-    item: 'Services'
+    href: 'services',
+    title: 'Services'
   },
   {
     id: 4,
-    anchor: '#projects',
-    item: 'Projects'
+    href: 'projects',
+    title: 'Projects'
   },
   {
     id: 5,
-    anchor: '#contact',
-    item: 'Contact'
+    href: 'contact',
+    title: 'Contact'
   }
 ]
 

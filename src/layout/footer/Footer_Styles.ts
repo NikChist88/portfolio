@@ -5,6 +5,7 @@ const Footer = styled.footer`
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
   background-color: #181824;
 `
 

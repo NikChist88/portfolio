@@ -7,7 +7,14 @@ export const Menu: React.FC = () => {
       {menuItems.map((item) => {
         return (
           <S.MenuItem role="menuitem" key={item.id}>
-            <S.MenuLink href={item.anchor}>{item.item}</S.MenuLink>
+            <S.MenuLink
+              activeClass="active"
+              spy={true}
+              to={item.href}
+              smooth={true}
+            >
+              {item.title}
+            </S.MenuLink>
           </S.MenuItem>
         )
       })}

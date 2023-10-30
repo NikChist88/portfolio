@@ -5,6 +5,8 @@ import { Button } from '../../../components/styled/Button'
 
 const Contact = styled.section`
   padding: 80px 0;
+  position: relative;
+  background-color: #1a1a29;
 
   @media screen and (max-width: 768px) {
     padding: 40px 0;

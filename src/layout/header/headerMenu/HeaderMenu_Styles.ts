@@ -1,6 +1,7 @@
+import { Link } from 'react-scroll'
 import styled, { css } from 'styled-components'
 
-const MenuLink = styled.a`
+const MenuLink = styled(Link)`
   font-size: 18px;
   font-weight: 600;
   color: #fff;
@@ -9,10 +10,15 @@ const MenuLink = styled.a`
   @media screen and (max-width: 768px) {
     font-size: 24px;
   }
+
+  &.active {
+    color: #7562e0;
+  }
 `
 
 const MenuItem = styled.li`
   &:hover > ${MenuLink} {
+    cursor: pointer;
     color: #7562e0;
   }
 `
@@ -38,10 +44,10 @@ const MobileMenu = styled.nav<{ isOpen: boolean }>`
   bottom: 0;
   right: 0;
   background-color: #1a1a29;
-  transition: transform ease-in 0.3s;
   transform: translateY(-100%);
+  transition: transform ease-in 0.3s;
   overflow-y: scroll;
-  z-index: 1;
+  z-index: 100;
 
   ul {
     display: flex;
