@@ -1,16 +1,29 @@
 import styled from 'styled-components'
 import { Icon } from './Icon'
 import { animateScroll as scroll } from 'react-scroll'
+import { useEffect, useState } from 'react'
 
 export const GoTopBtn: React.FC = () => {
+  const [showBtn, setShowBtn] = useState(false)
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      window.scrollY > 300 ? setShowBtn(true) : setShowBtn(false)
+    })
+  }, [])
+
   return (
-    <StyledGoTopBtn
-      onClick={() => {
-        scroll.scrollToTop()
-      }}
-    >
-      <Icon iconId="arrow-anchor" width="29px" height="28px" />
-    </StyledGoTopBtn>
+    <>
+      {showBtn && (
+        <StyledGoTopBtn
+          onClick={() => {
+            scroll.scrollToTop()
+          }}
+        >
+          <Icon iconId="arrow-anchor" width="29px" height="28px" />
+        </StyledGoTopBtn>
+      )}
+    </>
   )
 }
 
@@ -36,7 +49,7 @@ const StyledGoTopBtn = styled.a`
     background-color: #5345a1;
 
     svg {
-      transform: translateY(-5px);
+      transform: translateY(-3px);
     }
   }
 

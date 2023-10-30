@@ -3,7 +3,7 @@ import { Flex } from '../../../components/styled/Flex'
 
 const Hero = styled.section`
   padding: 80px 0 0px;
-  min-height: 640px;
+  min-height: 650px;
   height: 1px;
   position: relative;
 `
