@@ -1,5 +1,5 @@
 import { Icon } from '../../../components/Icon'
-import { SkillTitle } from '../../../components/SkillTitle'
+import { SkillTitle } from '../../../components/styled/SkillTitle'
 import { S } from './ServicesItems_Styles'
 
 type ServicesItemsPropsType = {
@@ -15,7 +15,6 @@ type ServicesItemsPropsType = {
 export const ServicesItems: React.FC<{
   items: Array<ServicesItemsPropsType>
 }> = (props: { items: Array<ServicesItemsPropsType> }) => {
-
   return (
     <S.ServicesItems>
       {props.items.map((item) => {

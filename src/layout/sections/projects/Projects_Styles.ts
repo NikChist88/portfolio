@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { SectionTitle } from '../../../components/SectionTitle'
+import { SectionTitle } from '../../../components/styled/SectionTitle'
 
 const Projects = styled.section`
   padding: 80px 0;

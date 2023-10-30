@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { SkillTitle } from "../../../components/SkillTitle";
+import styled from 'styled-components'
+import { SkillTitle } from '../../../components/styled/SkillTitle'
 
 const ServicesItems = styled.ul`
   display: grid;
@@ -42,9 +42,8 @@ const ServicesItem = styled.li`
   }
 `
 
-
 export const S = {
   ServicesItems,
   ServicesText,
-  ServicesItem
+  ServicesItem,
 }

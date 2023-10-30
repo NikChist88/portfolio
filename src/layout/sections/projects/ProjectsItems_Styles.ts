@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { SkillTitle } from "../../../components/SkillTitle";
+import styled from 'styled-components'
+import { SkillTitle } from '../../../components/styled/SkillTitle'
 
 const ProjectsItems = styled.ul`
   display: grid;
@@ -42,10 +42,9 @@ const ProjectsItemImage = styled.div`
   }
 `
 
-
 export const S = {
   ProjectsItems,
   ProjectsItem,
   ProjectsItemText,
-  ProjectsItemImage
+  ProjectsItemImage,
 }

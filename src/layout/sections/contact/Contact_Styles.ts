@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import { Flex } from '../../../components/Flex'
-import { SectionTitle } from '../../../components/SectionTitle'
-import { Button } from '../../../components/Button'
+import { Flex } from '../../../components/styled/Flex'
+import { SectionTitle } from '../../../components/styled/SectionTitle'
+import { Button } from '../../../components/styled/Button'
 
 const Contact = styled.section`
   padding: 80px 0;

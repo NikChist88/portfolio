@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 import decor from '../../../assets/images/decor.jpg'
-import { SectionTitle } from "../../../components/SectionTitle";
+import { SectionTitle } from '../../../components/styled/SectionTitle'
 
 const About = styled.section`
   padding: 190px 0 80px;
@@ -38,5 +38,4 @@ export const S = {
   About,
   AboutText,
   AboutDescription,
-  
 }

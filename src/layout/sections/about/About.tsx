@@ -1,5 +1,5 @@
-import { SectionTitle } from '../../../components/SectionTitle'
-import { Container } from '../../../components/Container'
+import { SectionTitle } from '../../../components/styled/SectionTitle'
+import { Container } from '../../../components/styled/Container'
 import { AboutSkills } from './AboutSkills'
 import { aboutItems } from '../../../data/data'
 import { S } from './About_Styles'

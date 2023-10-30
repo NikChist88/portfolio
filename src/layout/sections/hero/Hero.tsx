@@ -1,7 +1,7 @@
 import photo from '../../../assets/images/photo.png'
-import { Button } from '../../../components/Button'
-import { Container } from '../../../components/Container'
-import { Flex } from '../../../components/Flex'
+import { Button } from '../../../components/styled/Button'
+import { Container } from '../../../components/styled/Container'
+import { Flex } from '../../../components/styled/Flex'
 import { Icon } from '../../../components/Icon'
 import { S } from './Hero_Styles'
 

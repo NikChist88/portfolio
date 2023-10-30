@@ -1,5 +1,5 @@
 import { Icon } from '../../../components/Icon'
-import { SkillTitle } from '../../../components/SkillTitle'
+import { SkillTitle } from '../../../components/styled/SkillTitle'
 import { S } from './AboutSkills_Styles'
 
 type AboutSkillsPropsType = {
@@ -14,7 +14,6 @@ type AboutSkillsPropsType = {
 export const AboutSkills: React.FC<{
   items: Array<AboutSkillsPropsType>
 }> = (props: { items: Array<AboutSkillsPropsType> }) => {
-  
   return (
     <S.AboutSkills>
       {props.items.map((item) => {

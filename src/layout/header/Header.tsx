@@ -1,10 +1,20 @@
-import { Container } from '../../components/Container'
-import { Flex } from '../../components/Flex'
-import { HeaderMenu } from './headerMenu/HeaderMenu'
-import { menuItems } from '../../data/data'
+import { useState, useEffect } from 'react'
+import { Container } from '../../components/styled/Container'
+import { Flex } from '../../components/styled/Flex'
+import { DesktopMenu } from './headerMenu/desktopMenu/DesktopMenu'
+import { MobileMenu } from './headerMenu/mobileMenu/MobileMenu'
 import { S } from './Header_Styles'
 
 export const Header: React.FC = () => {
+  const [width, setWidth] = useState(window.innerWidth)
+  const breakpoint = 768
+
+  useEffect(() => {
+    const handleWindowResize = () => setWidth(window.innerWidth)
+    window.addEventListener('resize', handleWindowResize)
+    return () => window.removeEventListener('resize', handleWindowResize)
+  }, [])
+
   return (
     <S.Header>
       <Container>
@@ -15,7 +25,11 @@ export const Header: React.FC = () => {
           height="100%"
         >
           <S.HeaderLogo href="#">Jayjay Dinero</S.HeaderLogo>
-          <HeaderMenu items={menuItems} />
+          {width < breakpoint ? (
+            <MobileMenu />
+          ) : (
+            <DesktopMenu />
+          )}
         </Flex>
       </Container>
     </S.Header>

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Flex } from '../../../components/Flex'
+import { Flex } from '../../../components/styled/Flex'
 
 const Hero = styled.section`
   padding: 80px 0 0px;

@@ -1,6 +1,6 @@
-import { Flex } from '../../../components/Flex'
-import { Button } from '../../../components/Button'
-import { SkillTitle } from '../../../components/SkillTitle'
+import { Flex } from '../../../components/styled/Flex'
+import { Button } from '../../../components/styled/Button'
+import { SkillTitle } from '../../../components/styled/SkillTitle'
 import { S } from './ProjectsItems_Styles'
 
 type ProjectsItemsPropsType = {
@@ -14,7 +14,6 @@ type ProjectsItemsPropsType = {
 export const ProjectsItems: React.FC<{
   items: Array<ProjectsItemsPropsType>
 }> = (props: { items: Array<ProjectsItemsPropsType> }) => {
-  
   return (
     <S.ProjectsItems>
       {props.items.map((item) => {

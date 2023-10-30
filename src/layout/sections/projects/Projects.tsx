@@ -1,5 +1,5 @@
-import { Container } from '../../../components/Container'
-import { SectionTitle } from '../../../components/SectionTitle'
+import { Container } from '../../../components/styled/Container'
+import { SectionTitle } from '../../../components/styled/SectionTitle'
 import { ProjectsItems } from './ProjectsItems'
 import { projectsItems } from '../../../data/data'
 import { S } from './Projects_Styles'
