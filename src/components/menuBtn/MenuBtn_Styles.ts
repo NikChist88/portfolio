@@ -5,20 +5,7 @@ type MenuBtnPropsType = {
   onClick?: () => void
 }
 
-export const MenuBtn: React.FC<MenuBtnPropsType> = (
-  props: MenuBtnPropsType
-) => {
-
-  return (
-    <StyledMenuBtn isOpen={props.isOpen} onClick={props.onClick}>
-      <span></span>
-      <span></span>
-      <span></span>
-    </StyledMenuBtn>
-  )
-}
-
-const StyledMenuBtn = styled.button<MenuBtnPropsType>`
+const MenuBtn = styled.button<MenuBtnPropsType>`
   display: block;
   width: 40px;
   background-color: transparent;
@@ -67,3 +54,7 @@ const StyledMenuBtn = styled.button<MenuBtnPropsType>`
       `}
   }
 `
+
+export const S = {
+  MenuBtn,
+}

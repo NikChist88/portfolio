@@ -7,7 +7,7 @@ import { Projects } from './layout/sections/projects/Projects'
 import { Contact } from './layout/sections/contact/Contact'
 import { Footer } from './layout/footer/Footer'
 import { GoTopBtn } from './components/GoTopBtn'
-import { Particle } from './components/particle/Particle'
+import { Particle } from './components/Particle'
 
 export const App = () => {
   return (

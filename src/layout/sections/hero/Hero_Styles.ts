@@ -3,7 +3,7 @@ import { Flex } from '../../../components/styled/Flex'
 
 const Hero = styled.section`
   padding: 80px 0 0px;
-  min-height: 650px;
+  min-height: clamp(590px, 60vw, 640px);
   height: 1px;
   position: relative;
 `
@@ -12,13 +12,6 @@ const HeroContent = styled.div`
   flex: 0 1 435px;
   margin-right: 30px;
   padding-bottom: 55px;
-
-  @media screen and (max-width: 930px) {
-    ${Flex} {
-      flex-direction: column;
-      gap: 16px 0;
-    }
-  }
 
   @media screen and (max-width: 768px) {
     flex: 1 1 auto;
@@ -43,13 +36,13 @@ const HeroContent = styled.div`
 
 const HeroText = styled.span`
   display: inline-block;
-  font-size: calc((100vw - 320px) / (1920 - 320) * (32 - 24) + 24px);
+  font-size: clamp(24px, 3vw, 32px);
   font-weight: 600;
   margin-bottom: 6px;
 `
 
 const HeroName = styled.h2`
-  font-size: calc((100vw - 320px) / (1920 - 320) * (52 - 34) + 34px);
+  font-size: clamp(34px, 5vw, 52px);
   font-weight: 600;
   margin-bottom: 12px;
 `
@@ -58,28 +51,34 @@ const HeroDescription = styled.h1`
   font-size: 18px;
   font-weight: 500;
   margin-bottom: 32px;
+
+  p {
+    display: none;
+  }
 `
 
 const HeroImage = styled.div`
-  flex: 0 1 444px;
+  flex: 0 1 50%;
   align-self: flex-end;
   position: relative;
+  display: flex;
+  justify-content: flex-end;
 
   &::before {
     content: '';
     position: absolute;
     right: 0;
     bottom: -115px;
-    width: 486px;
-    height: 486px;
+    width: clamp(315px, 50vw, 486px);
+    height: clamp(315px, 50vw, 486px);
     border-radius: 50%;
     background-color: #7562e0;
     z-index: -1;
   }
 
   img {
-    display: block;
     max-width: 100%;
+    width: 444px;
     height: 100%;
     object-fit: cover;
   }

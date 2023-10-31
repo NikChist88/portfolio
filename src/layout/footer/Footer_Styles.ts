@@ -6,7 +6,6 @@ const Footer = styled.footer`
   flex-direction: column;
   align-items: center;
   position: relative;
-  background-color: #181824;
 `
 
 const FooterText = styled.p`

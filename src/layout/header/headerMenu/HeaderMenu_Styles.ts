@@ -1,6 +1,7 @@
 import { Link } from 'react-scroll'
 import styled, { css } from 'styled-components'
 
+// Menu
 const MenuLink = styled(Link)`
   font-size: 18px;
   font-weight: 600;
@@ -37,7 +38,18 @@ const DesktopMenu = styled.nav`
 `
 
 // Mobile Menu
-const MobileMenu = styled.nav<{ isOpen: boolean }>`
+const MobileMenu = styled.nav`
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px 0;
+    height: 100%;
+  }
+`
+
+const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   position: fixed;
   left: 0;
   top: 0;
@@ -48,15 +60,6 @@ const MobileMenu = styled.nav<{ isOpen: boolean }>`
   transition: transform ease-in 0.3s;
   overflow-y: scroll;
   z-index: 100;
-
-  ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 30px 0;
-    height: 100%;
-  }
 
   ${({ isOpen }) =>
     isOpen &&
@@ -70,4 +73,5 @@ export const S = {
   MenuLink,
   DesktopMenu,
   MobileMenu,
+  MobileMenuPopup,
 }

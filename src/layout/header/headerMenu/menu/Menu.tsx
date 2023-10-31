@@ -12,6 +12,7 @@ export const Menu: React.FC = () => {
               spy={true}
               to={item.href}
               smooth={true}
+              href="#"
             >
               {item.title}
             </S.MenuLink>

@@ -5,7 +5,6 @@ import { loadSlim } from 'tsparticles-slim'
 
 export const Particle = () => {
   const particlesInit = useCallback(async (engine: Engine) => {
-    console.log(engine)
     await loadSlim(engine)
   }, [])
 
@@ -31,11 +30,11 @@ export const Particle = () => {
           detect_on: 'canvas',
           events: {
             onhover: {
-              enable: true,
+              enable: false,
               mode: 'bubble',
             },
             onclick: {
-              enable: true,
+              enable: false,
               mode: 'repulse',
             },
             resize: true,
